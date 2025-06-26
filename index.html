@@ -3,7 +3,643 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio Dashboard</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/57d716799f.js" crossorigin="anonymous"></script>
   </head>
-  <body></body>
+ <body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <button class="sidebar-btn menu">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+      </button>
+      <button class="sidebar-btn active ">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M3 9.75L12 3l9 6.75V21a1.5 1.5 0 01-1.5 1.5H4.5A1.5 1.5 0 013 21V9.75z"
+          />
+        </svg>
+      </button>
+
+      <button class="sidebar-btn">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 12a5 5 0 100-10 5 5 0 000 10zM2 20.25C2 16 6 13.5 12 13.5s10 2.5 10 6.75"
+          />
+        </svg>
+      </button>
+
+      <button class="sidebar-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+        </svg>
+
+      </button>
+
+      <button class="sidebar-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+        </svg>
+
+      </button>
+
+      <button class="sidebar-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+
+      </button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+
+          </button>
+          <h1 class="header-title">Portfolio</h1>
+          <div class="search-box">
+            <svg
+              class="search-icon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <input type="text" class="search-input" placeholder="Search" />
+        </div>
+
+
+        </div>
+
+        <div class="header-right">
+          <button class="add-btn">+</button>
+          <button class="notification-btn">
+            <i class="fa-regular fa-bell"></i>
+            </svg>
+
+          </button>
+          <div class="user-profile">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face&auto=format"
+              alt="User"
+              class="user-avatar"
+            />
+            <span class="user-name">Hira R</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard -->
+      <div class="dashboard">
+        <!-- Projects Section -->
+        <section class="projects-section">
+          <div class="projects-header">
+            <div>
+              <h2 class="projects-title">Projects</h2>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px">
+              <span class="projects-date">July, 2020</span>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">45</div>
+              <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">12</div>
+              <div class="stat-label">In Process</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Upcoming</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10</div>
+              <div class="stat-label">Total Project</div>
+            </div>
+
+            <div class="view-options">
+              <button class="view-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              </button>
+              <button class="view-btn active">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Project Cards -->
+          <div class="projects-grid">
+            <div class="project-card blue">
+              <div class="project-header">
+                <div class="project-info">
+                  <div class="project-date">July 2,2020</div>
+                  <h3 class="project-title">Web Designing</h3>
+                  <p class="project-subtitle">Prototyping</p>
+                </div>
+                <button class="project-menu">⋮</button>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                  <div class="progress-fill blue" style="width: 90%"></div>
+                </div>
+                <div class="progress-percentage">90%</div>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108755-2616b88b2a46?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <div
+                    class="project-avatar"
+                    style="
+                      background: #3b82f6;
+                      color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 10px;
+                      font-weight: 600;
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <span class="time-badge blue">2 Days left</span>
+              </div>
+            </div>
+
+            <div class="project-card orange">
+              <div class="project-header">
+                <div class="project-info">
+                  <div class="project-date">July 5,2020</div>
+                  <h3 class="project-title">Mobile App</h3>
+                  <p class="project-subtitle">Shopping</p>
+                </div>
+                <button class="project-menu">⋮</button>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                  <div class="progress-fill orange" style="width: 30%"></div>
+                </div>
+                <div class="progress-percentage">30%</div>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <div
+                    class="project-avatar"
+                    style="
+                      background: #f97316;
+                      color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 10px;
+                      font-weight: 600;
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <span class="time-badge orange">3 week left</span>
+              </div>
+            </div>
+
+            <div class="project-card green">
+              <div class="project-header">
+                <div class="project-info">
+                  <div class="project-date">July 10,2020</div>
+                  <h3 class="project-title">Dashboard</h3>
+                  <p class="project-subtitle">Medical</p>
+                </div>
+                <button class="project-menu">⋮</button>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                  <div class="progress-fill green" style="width: 50%"></div>
+                </div>
+                <div class="progress-percentage">50%</div>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <div
+                    class="project-avatar"
+                    style="
+                      background: #10b981;
+                      color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 10px;
+                      font-weight: 600;
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <span class="time-badge green">3 week left</span>
+              </div>
+            </div>
+
+            <div class="project-card pink">
+              <div class="project-header">
+                <div class="project-info">
+                  <div class="project-date">July 15,2020</div>
+                  <h3 class="project-title">Web Designing</h3>
+                  <p class="project-subtitle">Wireframing</p>
+                </div>
+                <button class="project-menu">⋮</button>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                  <div class="progress-fill pink" style="width: 20%"></div>
+                </div>
+                <div class="progress-percentage">20%</div>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <div
+                    class="project-avatar"
+                    style="
+                      background: #ec4899;
+                      color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 10px;
+                      font-weight: 600;
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <span class="time-badge pink">3 Days left</span>
+              </div>
+            </div>
+
+            <div class="project-card purple">
+              <div class="project-header">
+                <div class="project-info">
+                  <div class="project-date">July 15,2020</div>
+                  <h3 class="project-title">Web Designing</h3>
+                  <p class="project-subtitle">Wireframing</p>
+                </div>
+                <button class="project-menu">⋮</button>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                  <div class="progress-fill purple" style="width: 20%"></div>
+                </div>
+                <div class="progress-percentage">20%</div>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <div
+                    class="project-avatar"
+                    style="
+                      background: #8b5cf6;
+                      color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 10px;
+                      font-weight: 600;
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <span class="time-badge purple">3 Days left</span>
+              </div>
+            </div>
+
+            <div class="project-card orange">
+              <div class="project-header">
+                <div class="project-info">
+                  <div class="project-date">July 15,2020</div>
+                  <h3 class="project-title">Web Designing</h3>
+                  <p class="project-subtitle">Wireframing</p>
+                </div>
+                <button class="project-menu">⋮</button>
+              </div>
+
+              <div class="progress-section">
+                <div class="progress-label">Progress</div>
+                <div class="progress-bar">
+                  <div class="progress-fill orange" style="width: 20%"></div>
+                </div>
+                <div class="progress-percentage">20%</div>
+              </div>
+
+              <div class="project-footer">
+                <div class="project-avatars">
+                  <img
+                    src="https://images.unsplash.com/photo-1601455763557-db1bea8a9a5a?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=24&h=24&fit=crop&crop=face&auto=format"
+                    class="project-avatar"
+                  />
+                  <div
+                    class="project-avatar"
+                    style="
+                      background: #f97316;
+                      color: white;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-size: 10px;
+                      font-weight: 600;
+                    "
+                  >
+                    +
+                  </div>
+                </div>
+                <span class="time-badge orange">3 Days left</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Client Messages Section -->
+        <section class="messages-section">
+          <div class="messages-header">
+            <h2 class="messages-title">Client Messages</h2>
+            <div class="messages-actions">
+              <button class="view-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+              <button class="view-btn">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <circle cx="12" cy="12" r="1"></circle>
+                  <circle cx="12" cy="12" r="8"></circle>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="messages-list">
+            <div class="message-item">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format"
+                alt="David"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">David</span>
+                  <button class="message-star">☆</button>
+                  <span class="message-time">21 July</span>
+                </div>
+                <p class="message-text">
+                  Hey tell me about progress of project? Waiting for your
+                  response
+                </p>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://images.unsplash.com/photo-1494790108755-2616b88b2a46?w=40&h=40&fit=crop&crop=face&auto=format"
+                alt="Stephanie"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Stephanie</span>
+                  <button class="message-star">☆</button>
+                  <span class="message-time">19 July</span>
+                </div>
+                <p class="message-text">
+                  I got your first assignment. It was quite good
+                  <span class="message-emoji">👍</span> You can Prototyping
+                  Shopping start work on next assignment
+                </p>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face&auto=format"
+                alt="William"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">William</span>
+                  <button class="message-star">☆</button>
+                  <span class="message-time">17 July</span>
+                </div>
+                <p class="message-text">
+                  I want some changes in previous work you sent me. Waiting for
+                  your reply.
+                </p>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face&auto=format"
+                alt="Alona"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Alona</span>
+                  <button class="message-star">☆</button>
+                  <span class="message-time">15 July</span>
+                </div>
+                <p class="message-text">
+                  I am really impressed from your work
+                  <span class="message-emoji">😊</span> Dashboard Web Designing
+                  Keep doing great work
+                </p>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=40&h=40&fit=crop&crop=face&auto=format"
+                alt="Hira"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Hira</span>
+                  <button class="message-star">☆</button>
+                  <span class="message-time">21 July</span>
+                </div>
+                <p class="message-text">
+                  When you start redesign of app? Previous project was perfect
+                  <span class="message-emoji">😍</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="message-item">
+              <img
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=40&h=40&fit=crop&crop=face&auto=format"
+                alt="Ghulam"
+                class="message-avatar"
+              />
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="message-sender">Ghulam</span>
+                  <button class="message-star">☆</button>
+                  <span class="message-time">21 July</span>
+                </div>
+                <p class="message-text">
+                  I want to let you know I am agree on that
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      // Add some interactivity
+      document.querySelectorAll(".sidebar-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document
+            .querySelectorAll(".sidebar-btn")
+            .forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+
+      document.querySelectorAll(".message-star").forEach((star) => {
+        star.addEventListener("click", function () {
+          this.style.color =
+            this.style.color === "rgb(251, 191, 36)" ? "#d1d5db" : "#fbbf24";
+        });
+      });
+
+      // Animate progress bars on load
+      window.addEventListener("load", function () {
+        document.querySelectorAll(".progress-fill").forEach((bar) => {
+          const width = bar.style.width;
+          bar.style.width = "0%";
+          setTimeout(() => {
+            bar.style.width = width;
+          }, 500);
+        });
+      });
+    </script>
+  </body>
 </html>

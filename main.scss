@@ -1,0 +1,16 @@
+@import "./scss/abstracts/variables";
+@import "./scss/abstracts/mixins";
+
+@import "./scss/base/reset";
+@import "./scss/base/typography";
+
+// 3. Components
+@import "./scss/components/buttons";
+@import "./scss/components/card";
+
+// 4. Layout
+@import "./scss/layouts/sidebar";
+@import "./scss/layouts/header";
+
+// 5. Pages
+@import "./scss/pages/dashboard";

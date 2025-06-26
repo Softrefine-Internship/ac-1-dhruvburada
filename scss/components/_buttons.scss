@@ -1,0 +1,36 @@
+.add-btn,
+.notification-btn,
+.menu-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: $gray;
+
+  &.add-btn {
+    width: 32px;
+    height: 32px;
+    background: $primary-dark;
+    color: white;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+
+  &.notification-btn {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.view-btn {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  color: $gray;
+  background: none;
+  cursor: pointer;
+
+  &.active {
+    background: #f1f5f9;
+    color: $primary-dark;
+  }
+}
