@@ -110,7 +110,7 @@ body {
   cursor: pointer;
   color: #1e293b;
   padding: 4px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 800;
 }
 
@@ -397,6 +397,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   color: #64748b;
+  font-size: 20px;
 }
 
 .sidebar-btn:hover {
@@ -528,7 +529,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 42px;
 }
 
 .projects-grid {
@@ -552,6 +553,7 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding-bottom: 8px;
   position: relative;
 }
 .messages-header::after {
