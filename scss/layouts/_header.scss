@@ -90,6 +90,8 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  border-left: solid 1px #64748b;
+  padding-left: 1rem;
 }
 
 .user-avatar {
@@ -100,6 +102,6 @@
 }
 
 .user-name {
-  font-weight: 500;
+  font-weight: 600;
   color: #1e293b;
 }
