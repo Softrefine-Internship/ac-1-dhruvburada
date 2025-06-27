@@ -1,0 +1,31 @@
+.time-badge {
+  padding: 9px 24px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+
+  &.blue {
+    background: #daf6fc;
+    color: #00bbf3;
+  }
+
+  &.orange {
+    background: white;
+    color: #f97316;
+  }
+
+  &.green {
+    background: white;
+    color: #10b981;
+  }
+
+  &.pink {
+    background: white;
+    color: #ec4899;
+  }
+
+  &.purple {
+    background: white;
+    color: #8b5cf6;
+  }
+}

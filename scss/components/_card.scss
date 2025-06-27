@@ -1,34 +1,191 @@
-.stat-card {
-  text-align: center;
-
-  .stat-number {
-    font-size: 22px;
-    font-weight: 700;
-    color: $primary-dark;
-  }
-
-  .stat-label {
-    font-size: 14px;
-    color: $gray;
-  }
-}
-
 .project-card {
-  border-radius: 16px;
+  border-radius: 45px;
   padding: 20px;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 3px;
+      border-radius: 2px;
+    }
+
+    &::before {
+      bottom: -8px;
+      width: 50%;
+      background: currentColor;
+    }
+
+    &::after {
+      bottom: -14px;
+      width: 30%;
+      background: currentColor;
+    }
+  }
+
+  &.blue {
+    background: #fff;
+    box-shadow: rgba(58, 58, 58, 0.2) 0px 1px 10px 1px;
+
+    &:hover::before,
+    &:hover::after {
+      background: #3b82f6;
+    }
+  }
 
   &.orange {
-    background: linear-gradient(135deg, #fed7aa, #fdba74);
+    background: $gradient-orange;
+
+    &:hover::before,
+    &:hover::after {
+      background: #f97316;
+    }
   }
+
   &.green {
-    background: linear-gradient(135deg, #bbf7d0, #86efac);
+    background: $gradient-green;
+
+    &:hover::before,
+    &:hover::after {
+      background: #10b981;
+    }
   }
+
   &.pink {
-    background: linear-gradient(135deg, #fce7f3, #f9a8d4);
+    background: $gradient-pink;
+
+    &:hover::before,
+    &:hover::after {
+      background: #ec4899;
+    }
   }
+
   &.purple {
-    background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+    background: $gradient-purple;
+
+    &:hover::before,
+    &:hover::after {
+      background: #8b5cf6;
+    }
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  .project-title,
+  .project-subtitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 7px;
+  }
+
+  .project-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 16px;
+  }
+
+  .project-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1e293b;
+    padding: 4px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .project-avatars {
+    display: flex;
+    gap: -8px;
+
+    .project-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-left: -8px;
+      background: #e2e8f0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.projects-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: $color-primary;
+}
+
+.project-date {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+  margin-left: -17px;
+
+  .stat-card {
+    text-align: start;
+    padding-left: 16px; // space so text doesn't clash with border
+    position: relative;
+
+    &:nth-child(-n + 3)::after {
+      /* Apply to first 4, so there's no dot after the last */
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -12px; /* Half of the gap */
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border: solid #64748b 1px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .stat-number {
+      font-size: 21px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #64748b;
+    }
   }
 }

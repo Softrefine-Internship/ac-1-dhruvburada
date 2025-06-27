@@ -1,0 +1,19 @@
+.dashboard {
+  padding: 7px 16px;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: $gap-xl;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: $gap-xl;
+  margin-bottom: 32px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}

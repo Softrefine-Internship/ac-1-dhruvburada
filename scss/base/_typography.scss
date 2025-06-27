@@ -1,3 +1,9 @@
+.stat-number {
+  font-size: $stat-number-size;
+  font-weight: 700;
+  color: $color-primary;
+}
+
 body {
   font-family: $font-stack;
   background: $bg-color;

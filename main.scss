@@ -1,16 +1,28 @@
 @import "./scss/abstracts/variables";
 @import "./scss/abstracts/mixins";
 
+@import "./scss/base/base";
 @import "./scss/base/reset";
 @import "./scss/base/typography";
+@import "./scss/base/utilities";
+@import "./scss/base/responsive";
 
 // 3. Components
 @import "./scss/components/buttons";
 @import "./scss/components/card";
+@import "./scss/components/avatars";
+@import "./scss/components/progress";
+@import "./scss/components/badges";
 
 // 4. Layout
 @import "./scss/layouts/sidebar";
 @import "./scss/layouts/header";
+@import "./scss/layouts/grid";
+@import "./scss/layouts/main-layout";
 
 // 5. Pages
+
+@import "./scss/pages/messages";
 @import "./scss/pages/dashboard";
+
+@import "./scss/base/responsive";
