@@ -28,6 +28,10 @@
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+
+    .view-options {
+      transform: translateX(50%);
+    }
   }
 
   .sidebar {

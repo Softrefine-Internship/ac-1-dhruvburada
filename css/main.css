@@ -72,6 +72,9 @@ body {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .stats-grid .view-options {
+    transform: translateX(50%);
+  }
   .sidebar {
     top: auto;
     bottom: 0;
@@ -706,6 +709,9 @@ body {
   }
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-grid .view-options {
+    transform: translateX(50%);
   }
   .sidebar {
     top: auto;
