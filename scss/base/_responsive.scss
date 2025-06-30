@@ -3,20 +3,27 @@
     grid-template-columns: 1fr;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .header-right {
-    display: none;
-  }
+  // .header-right {
+  //   display: none;
+  // }
 }
 
 @media (max-width: 768px) {
+  .search-input {
+    width: 100%;
+  }
+  .header-left {
+    flex-wrap: wrap;
+  }
   .main-content {
     margin-left: 0;
   }
 
+  .projects-grid {
+    grid-template-columns: 1fr;
+    overflow-y: visible;
+    max-height: auto;
+  }
   .stat-card:nth-child(-n + 3)::after {
     display: none;
     content: none;
@@ -30,7 +37,8 @@
     grid-template-columns: repeat(2, 1fr);
 
     .view-options {
-      transform: translateX(50%);
+      transform: translateY(50%);
+      grid-column: 2 / -1;
     }
   }
 
@@ -53,11 +61,5 @@
 
   .sidebar-btn {
     margin: 0 8px;
-  }
-}
-
-@media (max-width: 569px) {
-  .search-box {
-    display: none;
   }
 }

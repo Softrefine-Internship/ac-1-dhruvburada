@@ -1,28 +1,31 @@
 @use "../abstracts/mixins" as *;
 
 .header {
-  padding: 16px 24px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto; // Left area + right buttons
+  grid-template-rows: auto;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-between;
+  padding: 1rem 1.5rem;
 
   &-left {
     display: flex;
     align-items: center;
-    gap: 4rem; // replaced 130px with scalable unit
-    margin-left: 2rem;
+    gap: 3rem;
+    min-width: 0;
   }
 
   &-title {
-    font-size: 25px;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
     font-weight: 600;
     color: $color-primary;
+    white-space: nowrap;
   }
 
   &-right {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
   }
 }
 
@@ -30,21 +33,23 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 0.5rem;
   color: $color-muted;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .search-box {
   position: relative;
+  flex: 1;
 
   .search-input {
-    width: 348px;
-    padding: 8px 16px 8px 40px;
+    width: 22rem;
+    max-width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
     border: 1px solid $color-avatar-bg;
-    border-radius: 25px;
+    border-radius: 2rem;
     background: $color-bg;
-    font-size: 14px;
+    font-size: 0.9rem;
     outline: none;
 
     &:focus {
@@ -55,53 +60,146 @@
 
   .search-icon {
     position: absolute;
-    left: 12px;
+    left: 0.75rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     color: $color-muted;
   }
 }
 
 .add-btn {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   background: $color-primary;
   border: none;
   border-radius: 50%;
   color: white;
   cursor: pointer;
   @include flex-center;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
 .notification-btn {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
+  position: relative;
   border: none;
   cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    right: 0.25rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: red;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  i {
+    font-size: 1.2rem;
+  }
+}
+
+.searchbox-2 .search-input {
+  width: 22rem;
+  max-width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 2rem;
+  background: #f9fafb;
+  font-size: 0.9rem;
+  outline: none;
 }
 
 .user-profile {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   cursor: pointer;
-  border-left: solid 1px $color-muted;
-  padding-left: 1rem;
+  border-left: 1px solid $color-muted;
+  padding-left: 0.75rem;
 
   .user-avatar {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background: $color-avatar-bg;
   }
 
   .user-name {
     font-weight: 600;
+    font-size: 0.9rem;
     color: $color-primary;
+  }
+}
+
+.standalone-search {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  position: relative;
+  width: 100%;
+  display: none;
+
+  .standalone-search-input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border: 1px solid $color-avatar-bg;
+    border-radius: 2rem;
+    background: $color-bg;
+    font-size: 0.9rem;
+    outline: none;
+
+    &:focus {
+      border-color: $search-focus;
+      background: white;
+    }
+  }
+
+  .standalone-search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    color: $color-muted;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.75rem 1rem;
+    padding: 1rem;
+  }
+
+  body {
+    font-size: 10px;
+  }
+
+  .header-left {
+    grid-column: 1 / 2; // stays in first column
+    grid-row: 1;
+  }
+
+  .header-right {
+    grid-column: 2 / 3; // stays in second column
+    grid-row: 1;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .standalone-search {
+    display: block;
   }
 }

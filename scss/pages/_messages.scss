@@ -1,6 +1,7 @@
 @use "../abstracts/mixins" as *;
 
 .messages-section {
+  margin-top: 19px;
   padding: 24px;
   height: fit-content;
 }
@@ -34,6 +35,10 @@
   gap: 12px;
   padding: 16px 0;
   position: relative;
+
+  &:hover {
+    background: white;
+  }
 
   &:not(:last-child)::after {
     @include section-divider(-3rem, -1rem);
@@ -76,4 +81,20 @@
   font-size: 14px;
   color: $color-muted;
   line-height: 1.4;
+}
+
+.messages-list {
+  max-height: 550px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b transparent;
+  // For WebKit browsers
+
+  &::-webkit-scrollbar-thumb {
+    background: $color-primary;
+    border-radius: 3px;
+  }
 }

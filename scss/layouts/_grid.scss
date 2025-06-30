@@ -1,8 +1,8 @@
 .dashboard {
   padding: 7px 16px;
   display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: $gap-xl;
+  grid-template-columns: 60% 40%;
+  gap: 24px;
 }
 
 .stats-grid {
@@ -16,4 +16,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  padding: 20px;
+  overflow-x: hidden;
+  max-height: 800px;
+  padding-right: 18px;
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b transparent;
+}
+
+@media (max-width: 1179px) and (min-width: 1090px) {
+  .stats-grid {
+    gap: 10px !important;
+  }
 }
