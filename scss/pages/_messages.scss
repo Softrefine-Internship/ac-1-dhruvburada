@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .messages-section {
   padding: 24px;
   height: fit-content;
@@ -12,14 +14,7 @@
   position: relative;
 
   &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -3rem;
-    right: -1rem;
-    height: 1px;
-    width: calc(100% + 5.125rem);
-    background: #ddd;
+    @include section-divider(-3rem, -1rem);
   }
 }
 
@@ -41,14 +36,7 @@
   position: relative;
 
   &:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -3rem;
-    right: -1rem;
-    height: 1px;
-    background: #ddd;
-    width: calc(100% + 5.125rem);
+    @include section-divider(-3rem, -1rem);
   }
 }
 
@@ -56,7 +44,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #e2e8f0;
+  background: $color-avatar-bg;
   flex-shrink: 0;
 }
 

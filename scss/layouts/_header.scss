@@ -1,3 +1,5 @@
+@use "../abstracts/mixins" as *;
+
 .header {
   padding: 16px 24px;
   display: flex;
@@ -7,20 +9,20 @@
   &-left {
     display: flex;
     align-items: center;
-    gap: 130px;
-    margin-left: 33px;
+    gap: 4rem; // replaced 130px with scalable unit
+    margin-left: 2rem;
   }
 
   &-title {
     font-size: 25px;
     font-weight: 600;
-    color: #1e293b;
+    color: $color-primary;
   }
 
   &-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
   }
 }
 
@@ -29,7 +31,8 @@
   border: none;
   cursor: pointer;
   padding: 8px;
-  color: #64748b;
+  color: $color-muted;
+  font-size: 16px;
 }
 
 .search-box {
@@ -38,14 +41,14 @@
   .search-input {
     width: 348px;
     padding: 8px 16px 8px 40px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid $color-avatar-bg;
     border-radius: 25px;
-    background: #fefefe;
+    background: $color-bg;
     font-size: 14px;
     outline: none;
 
     &:focus {
-      border-color: #3b82f6;
+      border-color: $search-focus;
       background: white;
     }
   }
@@ -57,21 +60,19 @@
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    color: #64748b;
+    color: $color-muted;
   }
 }
 
 .add-btn {
   width: 32px;
   height: 32px;
-  background: #1e293b;
+  background: $color-primary;
   border: none;
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   font-size: 18px;
   font-weight: 300;
 }
@@ -89,18 +90,18 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  border-left: solid 1px #64748b;
+  border-left: solid 1px $color-muted;
   padding-left: 1rem;
 
   .user-avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: #e2e8f0;
+    background: $color-avatar-bg;
   }
 
   .user-name {
     font-weight: 600;
-    color: #1e293b;
+    color: $color-primary;
   }
 }

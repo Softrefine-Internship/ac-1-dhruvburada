@@ -1,9 +1,11 @@
+@use "../abstracts/mixins" as *;
+
 .project-card {
-  border-radius: 45px;
+  border-radius: $radius-lg + 1px;
   padding: 20px;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  @include transition(0.3s);
 
   &:hover {
     transform: translateY(-4px);
@@ -34,53 +36,32 @@
   &.blue {
     background: #fff;
     box-shadow: rgba(58, 58, 58, 0.2) 0px 1px 10px 1px;
-
-    &:hover::before,
-    &:hover::after {
-      background: #3b82f6;
-    }
+    @include card-hover(#3b82f6);
   }
 
   &.orange {
     background: $gradient-orange;
-
-    &:hover::before,
-    &:hover::after {
-      background: #f97316;
-    }
+    @include card-hover(#f97316);
   }
 
   &.green {
     background: $gradient-green;
-
-    &:hover::before,
-    &:hover::after {
-      background: #10b981;
-    }
+    @include card-hover(#10b981);
   }
 
   &.pink {
     background: $gradient-pink;
-
-    &:hover::before,
-    &:hover::after {
-      background: #ec4899;
-    }
+    @include card-hover(#ec4899);
   }
 
   &.purple {
     background: $gradient-purple;
-
-    &:hover::before,
-    &:hover::after {
-      background: #8b5cf6;
-    }
+    @include card-hover(#8b5cf6);
   }
 
   .project-header {
-    display: flex;
+    @include flex-center;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 16px;
   }
 
@@ -94,13 +75,13 @@
   .project-title {
     font-size: 18px;
     font-weight: 600;
-    color: #1e293b;
+    color: $color-primary;
     margin-bottom: 7px;
   }
 
   .project-subtitle {
     font-size: 14px;
-    color: #64748b;
+    color: $color-muted;
     margin-bottom: 16px;
   }
 
@@ -108,7 +89,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: #1e293b;
+    color: $color-primary;
     padding: 4px;
     font-size: 20px;
     font-weight: 800;
@@ -125,20 +106,12 @@
     gap: -8px;
 
     .project-avatar {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 2px solid white;
-      margin-left: -8px;
-      background: #e2e8f0;
-
-      &:first-child {
-        margin-left: 0;
-      }
+      @include avatar;
     }
   }
 }
 
+// Extra styles
 .projects-title {
   font-size: 20px;
   font-weight: 600;
@@ -147,45 +120,72 @@
 
 .project-date {
   font-size: 14px;
-  color: #64748b;
+  color: $color-muted;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
+  gap: $gap-xl;
   margin-bottom: 32px;
   margin-left: -17px;
 
   .stat-card {
+    max-width: 140px;
     text-align: start;
-    padding-left: 16px; // space so text doesn't clash with border
+    padding-left: 16px;
     position: relative;
 
     &:nth-child(-n + 3)::after {
-      /* Apply to first 4, so there's no dot after the last */
+      /* Apply to first 3 cards, so there's no dot after the last stat card */
       content: "";
       position: absolute;
-      top: 50%;
-      right: -12px; /* Half of the gap */
+      bottom: 0%;
+      left: 100%;
+      margin-left: calc(
+        #{$gap-xl} / 2 - 3px
+      ); /* Half gap minus half dot width */
       transform: translateY(-50%);
       width: 6px;
       height: 6px;
-      border: solid #64748b 1px;
+      border: solid $color-muted 1px;
       border-radius: 50%;
       background: white;
+      z-index: 1;
     }
 
     .stat-number {
-      font-size: 21px;
+      font-size: $stat-number-size;
       font-weight: 700;
-      color: #1e293b;
+      color: $color-primary;
       margin-bottom: 4px;
     }
 
     .stat-label {
       font-size: 14px;
-      color: #64748b;
+      color: $color-muted;
+    }
+  }
+
+  .view-options {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+
+    .view-btn {
+      padding: 8px;
+
+      border-radius: 4px;
+      background: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        background: #f5f5f5;
+      }
     }
   }
 }

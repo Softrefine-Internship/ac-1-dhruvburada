@@ -14,3 +14,39 @@
     background: $color;
   }
 }
+
+@mixin avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -8px;
+  background: $color-muted;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+@mixin hover-line($width, $bottom, $bg-color) {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  border-radius: 2px;
+  width: $width;
+  bottom: $bottom;
+  background: $bg-color;
+}
+
+@mixin section-divider($left, $right, $extra-width: 5.125rem) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: $left;
+  right: $right;
+  width: calc(100% + $extra-width);
+  height: 1px;
+  background: $divider-color;
+}

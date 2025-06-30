@@ -27,6 +27,10 @@ body {
   overflow-x: hidden;
 }
 
+.projects-date {
+  font-weight: 600;
+}
+
 .grey-line {
   width: calc(100% + 40px);
   height: 2px;
@@ -129,7 +133,7 @@ body {
   padding: 20px;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .project-card:hover {
   transform: translateY(-4px);
@@ -185,8 +189,9 @@ body {
 }
 .project-card .project-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 16px;
 }
 .project-card .project-title,
@@ -230,7 +235,7 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   margin-left: -8px;
-  background: #e2e8f0;
+  background: #64748b;
 }
 .project-card .project-avatars .project-avatar:first-child {
   margin-left: 0;
@@ -255,22 +260,25 @@ body {
   margin-left: -17px;
 }
 .stats-grid .stat-card {
+  max-width: 140px;
   text-align: start;
   padding-left: 16px;
   position: relative;
 }
 .stats-grid .stat-card:nth-child(-n+3)::after {
-  /* Apply to first 4, so there's no dot after the last */
+  /* Apply to first 3 cards, so there's no dot after the last stat card */
   content: "";
   position: absolute;
-  top: 50%;
-  right: -12px; /* Half of the gap */
+  bottom: 0%;
+  left: 100%;
+  margin-left: calc(24px / 2 - 3px); /* Half gap minus half dot width */
   transform: translateY(-50%);
   width: 6px;
   height: 6px;
   border: solid #64748b 1px;
   border-radius: 50%;
   background: white;
+  z-index: 1;
 }
 .stats-grid .stat-card .stat-number {
   font-size: 21px;
@@ -281,6 +289,24 @@ body {
 .stats-grid .stat-card .stat-label {
   font-size: 14px;
   color: #64748b;
+}
+.stats-grid .view-options {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.stats-grid .view-options .view-btn {
+  padding: 8px;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats-grid .view-options .view-btn:hover {
+  background: #f5f5f5;
 }
 
 .project-avatar {
@@ -346,6 +372,9 @@ body {
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
 }
 .time-badge.blue {
   background: #daf6fc;
@@ -428,8 +457,8 @@ body {
 .header-left {
   display: flex;
   align-items: center;
-  gap: 130px;
-  margin-left: 33px;
+  gap: 4rem;
+  margin-left: 2rem;
 }
 .header-title {
   font-size: 25px;
@@ -439,7 +468,7 @@ body {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .menu-btn {
@@ -448,6 +477,7 @@ body {
   cursor: pointer;
   padding: 8px;
   color: #64748b;
+  font-size: 16px;
 }
 
 .search-box {
@@ -458,7 +488,7 @@ body {
   padding: 8px 16px 8px 40px;
   border: 1px solid #e2e8f0;
   border-radius: 25px;
-  background: #fefefe;
+  background: #f9fafb;
   font-size: 14px;
   outline: none;
 }
@@ -562,8 +592,8 @@ body {
   bottom: 0;
   left: -3rem;
   right: -1rem;
-  height: 1px;
   width: calc(100% + 5.125rem);
+  height: 1px;
   background: #ddd;
 }
 
@@ -590,9 +620,9 @@ body {
   bottom: 0;
   left: -3rem;
   right: -1rem;
+  width: calc(100% + 5.125rem);
   height: 1px;
   background: #ddd;
-  width: calc(100% + 5.125rem);
 }
 
 .message-avatar {
