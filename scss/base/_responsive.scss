@@ -9,6 +9,17 @@
 }
 
 @media (max-width: 768px) {
+  * {
+    font-size: 14px !important;
+  }
+  body {
+    overflow: visible;
+  }
+  .messages-list {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+  }
   .search-input {
     width: 100%;
   }
@@ -22,7 +33,7 @@
   .projects-grid {
     grid-template-columns: 1fr;
     overflow-y: visible;
-    max-height: auto;
+    max-height: none;
   }
   .stat-card:nth-child(-n + 3)::after {
     display: none;
@@ -61,5 +72,10 @@
 
   .sidebar-btn {
     margin: 0 8px;
+  }
+
+  .time-badge {
+    padding: 0.6625rem 0.5rem;
+    border-radius: 1.25rem;
   }
 }

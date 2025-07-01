@@ -73,16 +73,17 @@
   }
 
   .project-title {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
-    color: $color-primary;
-    margin-bottom: 7px;
+    color: #151522;
+    margin-bottom: 0.435rem;
   }
 
   .project-subtitle {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgb(35, 35, 35);
+    margin-bottom: 1rem;
   }
 
   .project-menu {
@@ -90,8 +91,8 @@
     border: none;
     cursor: pointer;
     color: $color-primary;
-    padding: 4px;
-    font-size: 20px;
+    padding: 0.25rem;
+    font-size: 1.25rem;
     font-weight: 800;
   }
 
@@ -113,13 +114,13 @@
 
 // Extra styles
 .projects-title {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   color: $color-primary;
 }
 
 .project-date {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: $color-muted;
 }
 
@@ -162,8 +163,8 @@
     }
 
     .stat-label {
-      font-size: 14px;
-      color: $color-muted;
+      font-size: 0.875rem;
+      color: rgb(35, 35, 35);
     }
   }
 

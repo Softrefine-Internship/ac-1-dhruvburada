@@ -20,7 +20,7 @@
 }
 
 .messages-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   color: $color-primary;
 }
@@ -37,6 +37,7 @@
   position: relative;
 
   &:hover {
+    cursor: pointer;
     background: white;
   }
 
@@ -72,13 +73,13 @@
 }
 
 .message-time {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: $color-muted;
   align-self: flex-end;
 }
 
 .message-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: $color-muted;
   line-height: 1.4;
 }
