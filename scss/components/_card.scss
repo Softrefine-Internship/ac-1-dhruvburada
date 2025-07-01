@@ -4,7 +4,7 @@
   border-radius: $radius-lg + 1px;
   padding: 20px;
   position: relative;
-  border: 1px solid rgb(35, 35, 35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   @include transition(0.3s);
 
   &:hover {
@@ -150,7 +150,7 @@
       transform: translateY(-50%);
       width: 6px;
       height: 6px;
-      border: solid $color-muted 1px;
+      border: solid rgb(35, 35, 35) 1px;
       border-radius: 50%;
       background: white;
       z-index: 1;
