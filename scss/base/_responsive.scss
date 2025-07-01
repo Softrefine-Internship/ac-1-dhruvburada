@@ -3,6 +3,10 @@
     grid-template-columns: 1fr;
   }
 
+  body {
+    overflow: visible;
+  }
+
   // .header-right {
   //   display: none;
   // }
@@ -12,9 +16,7 @@
   * {
     font-size: 14px !important;
   }
-  body {
-    overflow: visible;
-  }
+
   .messages-list {
     max-height: none;
     overflow: visible;

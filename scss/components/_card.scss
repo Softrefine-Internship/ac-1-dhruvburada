@@ -56,6 +56,7 @@
 
   &.purple {
     background: $gradient-purple;
+    margin-bottom: 25px;
     @include card-hover(#8b5cf6);
   }
 

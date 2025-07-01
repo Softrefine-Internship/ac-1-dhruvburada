@@ -52,13 +52,13 @@ body {
   .dashboard {
     grid-template-columns: 1fr;
   }
+  body {
+    overflow: visible;
+  }
 }
 @media (max-width: 768px) {
   * {
     font-size: 14px !important;
-  }
-  body {
-    overflow: visible;
   }
   .messages-list {
     max-height: none;
@@ -203,6 +203,7 @@ body {
 }
 .project-card.purple {
   background: #e9e7fd;
+  margin-bottom: 25px;
 }
 .project-card.purple:hover::before, .project-card.purple:hover::after {
   background: #8b5cf6;
@@ -673,7 +674,7 @@ body {
   gap: 20px;
   padding: 20px;
   overflow-x: hidden;
-  max-height: 800px;
+  max-height: 65dvh;
   padding-right: 18px;
   scrollbar-width: thin;
   scrollbar-color: #1e293b transparent;
@@ -822,13 +823,13 @@ body {
   .dashboard {
     grid-template-columns: 1fr;
   }
+  body {
+    overflow: visible;
+  }
 }
 @media (max-width: 768px) {
   * {
     font-size: 14px !important;
-  }
-  body {
-    overflow: visible;
   }
   .messages-list {
     max-height: none;
