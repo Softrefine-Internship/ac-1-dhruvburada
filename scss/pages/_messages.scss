@@ -2,7 +2,7 @@
 
 .messages-section {
   margin-top: 19px;
-  padding: 24px;
+
   height: fit-content;
 }
 
@@ -10,12 +10,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  padding-bottom: 8px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 17px;
+  padding-top: 22px;
+  /* padding: 18px 30px; */
   position: relative;
+  padding-bottom: 18px;
 
   &::after {
-    @include section-divider(-3rem, -1rem);
+    @include section-divider(0rem, -1rem, 0.125rem);
   }
 }
 
@@ -33,16 +37,23 @@
 .message-item {
   display: flex;
   gap: 12px;
-  padding: 16px 0;
+  padding: 1rem 1.16rem;
   position: relative;
+
+  &.first-message {
+    padding-top: 0px;
+  }
 
   &:hover {
     cursor: pointer;
     background: white;
   }
 
+  &:last-child {
+    margin-bottom: 0px;
+  }
   &:not(:last-child)::after {
-    @include section-divider(-3rem, -1rem);
+    @include section-divider(-3rem, -1rem, 5.325rem);
   }
 }
 
@@ -85,17 +96,35 @@
 }
 
 .messages-list {
-  max-height: 550px;
+  max-height: 90vh;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 18px;
-  scrollbar-width: thin;
-  scrollbar-color: #1e293b transparent;
+
   // For WebKit browsers
 
+  // &::-webkit-scrollbar-thumb {
+  //   background: $color-primary;
+  //   border-radius: 3px;
+  // }
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
   &::-webkit-scrollbar-thumb {
-    background: $color-primary;
-    border-radius: 3px;
+    background: #888;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }

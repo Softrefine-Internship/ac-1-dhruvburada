@@ -40,7 +40,7 @@
   background: $bg-color;
 }
 
-@mixin section-divider($left, $right, $extra-width: 5.125rem) {
+@mixin section-divider($left, $right, $extra-width: 2.125rem) {
   content: "";
   position: absolute;
   bottom: 0;

@@ -16,10 +16,11 @@
   }
 
   &-title {
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.6rem);
     font-weight: 600;
     color: $color-primary;
     white-space: nowrap;
+    margin-left: 29px;
   }
 
   &-right {
